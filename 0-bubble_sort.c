@@ -12,7 +12,7 @@ size_t i = 0;
 size_t j = 0;
 int tmp;
 
-if (size < 2)
+if (size < 2 || array == NULL)
 return;
 while (i < size)
 {
