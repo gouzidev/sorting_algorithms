@@ -28,20 +28,27 @@ int temp = *EL_1;
 
 void insertion_sort_arr(int *arr, size_t size, size_t gap)
 {
-size_t i = gap, j;
+    size_t i = gap, j;
+    int current, current_index;
 
-while (i < size)
-{
-j = i;
-while (j >= gap)
-{
-if (arr[j - gap] > arr[i])
-swap_arr(&arr[j - gap], &arr[i]);
-j -= gap;
-}
+    while (i < size)
+    {
+        current = arr[i];
+        current_index = i;
+        j = i;
+
+        while (j >= gap && arr[j - gap] > current)
+        {
+            arr[j] = arr[j - gap];
+            current_index = j - gap;
+            j -= gap;
+        }
+
+        arr[current_index] = current;
 i++;
 }
 }
+
 
 /**
  * shell_sort - Sorts an array of integers in
