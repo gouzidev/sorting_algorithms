@@ -28,23 +28,23 @@ int temp = *EL_1;
 
 void insertion_sort_arr(int *arr, size_t size, size_t gap)
 {
-    size_t i = gap, j;
-    int current, current_index;
+size_t i = gap, j;
+int current, current_index;
 
-    while (i < size)
-    {
-        current = arr[i];
-        current_index = i;
-        j = i;
+while (i < size)
+{
+current = arr[i];
+current_index = i;
+j = i;
 
-        while (j >= gap && arr[j - gap] > current)
-        {
-            arr[j] = arr[j - gap];
-            current_index = j - gap;
-            j -= gap;
-        }
+while (j >= gap && arr[j - gap] > current)
+{
+arr[j] = arr[j - gap];
+current_index = j - gap;
+j -= gap;
+}
 
-        arr[current_index] = current;
+arr[current_index] = current;
 i++;
 }
 }
