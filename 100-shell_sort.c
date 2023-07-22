@@ -65,6 +65,7 @@ gap = (gap - 1) / 3;
 while (gap >= 1)
 {
 insertion_sort_arr(array, size, gap);
+print_array(array, size);
 gap = (gap - 1) / 3;
 }
 }
