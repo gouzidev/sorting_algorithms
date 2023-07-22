@@ -26,8 +26,8 @@ void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
 
 /*algos:*/
-void insertion_sort_list(listint_t **list);
 void insertion_sort_arr(int *arr, size_t size, size_t gap);
+void insertion_sort_list(listint_t **list);
 /*advanced*/
 void shell_sort(int *array, size_t size);
 
