@@ -31,6 +31,11 @@ void insertion_sort_arr(int *arr, size_t size, size_t gap);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 /*advanced*/
+void cocktail_sort_list(listint_t **list);
+/*helper for cocktail swap*/
+void swap_front(listint_t **list, listint_t **tail, listint_t **shaker);
+void swap_back(listint_t **list, listint_t **tail, listint_t **shaker);
+
 void shell_sort(int *array, size_t size);
 
 #endif
