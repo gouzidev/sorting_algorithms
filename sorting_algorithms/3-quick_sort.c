@@ -8,9 +8,9 @@
  */
 void swap(int *a, int *b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+int temp = *a;
+*a = *b;
+*b = temp;
 }
 
 /**
@@ -29,23 +29,23 @@ void swap(int *a, int *b)
  */
 int partition(int *array, size_t size, int low, int high)
 {
-    int pivot = array[high];
-    int i = low - 1, j = low;
+int pivot = array[high];
+int i = low - 1, j = low;
 
-    while (j < high)
-    {
-        if (array[j] <= pivot)
-        {
-            i++;
-            swap(&array[i], &array[j]);
-        }
-        j++;
-    }
+while (j < high)
+{
+if (array[j] <= pivot)
+{
+i++;
+swap(&array[i], &array[j]);
+}
+j++;
+}
 
-    swap(&array[i + 1], &array[high]);
-    print_array(array, size);
+swap(&array[i + 1], &array[high]);
+print_array(array, size);
 
-    return (i + 1);
+return (i + 1);
 }
 
 /**
@@ -59,13 +59,13 @@ int partition(int *array, size_t size, int low, int high)
  */
 void quick_sort_rec(int *array, size_t size, int low, int high)
 {
-    if (low < high)
-    {
-        int p_i = partition(array, size, low, high);
+if (low < high)
+{
+int p_i = partition(array, size, low, high);
 
-        quick_sort_rec(array, size, low, p_i - 1);
-        quick_sort_rec(array, size, p_i + 1, high);
-    }
+quick_sort_rec(array, size, low, p_i - 1);
+quick_sort_rec(array, size, p_i + 1, high);
+}
 }
 
 /**
@@ -77,5 +77,5 @@ void quick_sort_rec(int *array, size_t size, int low, int high)
  */
 void quick_sort(int *array, size_t size)
 {
-    quick_sort_rec(array, size, 0, size - 1);
+quick_sort_rec(array, size, 0, size - 1);
 }
