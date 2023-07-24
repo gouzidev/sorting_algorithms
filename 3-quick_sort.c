@@ -16,6 +16,7 @@ int temp = *a;
 /**
  * partition - Partitions the array into two
  * subarrays around a pivot element.
+ *
  * @array: A pointer to the array to be sorted.
  * @size: The size of the array.
  * @low: The index of the first element
@@ -37,11 +38,14 @@ if (array[j] <= pivot)
 {
 i++;
 swap(&array[i], &array[j]);
+if (i != j)
+print_array(array, size);
 }
 j++;
 }
 
 swap(&array[i + 1], &array[high]);
+if (i + 1 != high)
 print_array(array, size);
 
 return (i + 1);
